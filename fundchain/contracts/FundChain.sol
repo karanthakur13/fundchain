@@ -5,11 +5,13 @@ contract FundChain {
     struct Campaign {
         address owner;
         string title;
+        string category;
         string description;
         uint256 target;
         uint256 deadline;
         uint256 fundRaised;
         string image;
+        uint256 countVolunteer;
         address[] donators;
         address[] volunteers;
         string[] names;
@@ -22,6 +24,7 @@ contract FundChain {
     function createCampaign(
         address _owner,
         string memory _title,
+        string memory _category,
         string memory _description,
         uint256 _target,
         uint256 _deadline,
@@ -35,10 +38,12 @@ contract FundChain {
         );
         campaign.owner = _owner;
         campaign.title = _title;
+        campaign.category = _category;
         campaign.description = _description;
         campaign.target = _target;
         campaign.deadline = _deadline;
         campaign.fundRaised = 0;
+        campaign.countVolunteer = 0;
         campaign.image = _image;
 
         noOfcampaigns++;

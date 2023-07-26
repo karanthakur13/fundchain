@@ -27,7 +27,7 @@ Follow the steps below to set up the Crowdfunding Application on your local mach
 1. Clone the Repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/karanthakur13/fundchain.git
    cd fundchain
    ```
 
